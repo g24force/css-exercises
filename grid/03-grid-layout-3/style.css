@@ -3,8 +3,15 @@
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,6 +24,20 @@
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+.logo {
+  grid-column: 1 / 2;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .menu ul,
@@ -26,6 +47,9 @@
 
 .sidebar {
   background-color: #C50208;
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -44,8 +68,20 @@
   font-weight: normal;
 }
 
+.side-content,
+.photo {
+  display: grid;
+  place-items: center;
+}
+
 .nav {
   background-color: #C50208;
+  grid-column: 2 / -1;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
@@ -55,6 +91,9 @@
 
 .article {
   background-color: #bccbde;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .article p {
@@ -68,6 +107,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
 
 .card p {
@@ -83,6 +123,7 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
 }
 
 .footer p {
